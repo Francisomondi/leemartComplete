@@ -1,5 +1,5 @@
 
-const BackendDomain = "http://localhost:8000"
+const BackendDomain = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000"
 
 const summeryApi= {
     signUP:{
