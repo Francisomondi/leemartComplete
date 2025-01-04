@@ -1,5 +1,6 @@
 
-const BackendDomain = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000"
+const BackendDomain = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000"||"leemart-complete.vercel.app"
+
 
 const summeryApi= {
     signUP:{
