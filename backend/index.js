@@ -16,8 +16,21 @@ const app = express();
 }));
 */}
 const allowedOrigins = [ process.env.FRONTEND_URL, 'https://leemart-complete-4z1h.vercel.app'];
-app.use(cors({ origin: allowedOrigins }));
-app.options('*', cors());
+app.use(
+    cors({
+      origin: function (origin, callback) {
+        if (allowedOrigins.includes(origin)) {
+          callback(null, true);
+        } else {
+          callback(new Error('Not allowed by CORS'));
+        }
+      },
+      credentials: true, // Allow credentials like cookies or tokens
+    })
+  );
+  
+  // Handle preflight requests
+  app.options('*', cors());
 app.use(cookieParser())
 
 // Middleware to parse JSON request bodies
