@@ -25,7 +25,7 @@ const Header = () => {
   const [search,setSearch] = useState(searchQuery)
 
 const user = useSelector(state=>state?.user?.user)
-console.log('payload',user)
+//console.log('payload',user)
 
 
 const handleSignOut = async  () =>{
