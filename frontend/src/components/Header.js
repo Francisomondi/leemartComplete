@@ -41,11 +41,12 @@ const Header = () => {
   return (
     <header className="h-16 shadow-md bg-white fixed w-full z-40">
       <div className="h-full container mx-auto flex items-center px-4 justify-between">
-        <div>
-          <Link to="/">
-            <img src="/logo.png" alt="Logo" width={150} />
-          </Link>
-        </div>
+            <div className=''>
+              <Link to={"/"}>
+              <img src={logo} width={150} height={90}/>
+              
+              </Link>
+            </div>
 
         <div className="flex items-center gap-7">
           {user ? (
