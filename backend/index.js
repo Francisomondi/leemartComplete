@@ -15,20 +15,23 @@ const app = express();
     credentials: true
 }));
 */}
-const allowedOrigins = [ process.env.FRONTEND_URL, 'https://leemart-complete-4z1h.vercel.app'];
+const allowedOrigins = [process.env.FRONTEND_URL, 'https://leemart-complete-4z1h.vercel.app'];
+
 app.use(
-    cors({
-      origin: function (origin, callback) {
-        if (allowedOrigins.includes(origin)) {
-          callback(null, true);
-        } else {
-          callback(new Error('Not allowed by CORS'));
-        }
-      },
-      credentials: true, // Allow credentials like cookies or tokens
-    })
-  );
-  
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {  // Allow if no origin (Postman, mobile apps)
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true, // Allow credentials like cookies or tokens
+  })
+);
+console.log("Allowed Origins:", allowedOrigins);
+
+
   // Handle preflight requests
   app.options('*', cors());
 app.use(cookieParser())

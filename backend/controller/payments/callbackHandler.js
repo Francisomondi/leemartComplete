@@ -6,10 +6,10 @@ const callbackHandler = (req, res) => {
 
     if (!callbackData.Body.stkCallback.CallbackMetadata) {
       console.log(callbackData.Body)
-      res.json('ok')
+      return res.json('ok')
     }
   
-    //console.log(callbackData.Body.stkCallback.CallbackMetadata)
+    console.log(callbackData.Body.stkCallback.CallbackMetadata)
 
     
     const trnx_id = callbackData.Body.stkCallback.CallbackMetadata.Item[1].Value
