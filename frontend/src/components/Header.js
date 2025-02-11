@@ -69,7 +69,7 @@ const handleSearch = (e) =>{
               </Link>
             </div>
 
-            <div className='hidden lg:flex items-center w-full justify-between max-w-sm border rounded-full focus-within:shadow pl-2 '>
+            <div className='flex items-center w-full justify-between max-w-sm border rounded-full focus-within:shadow pl-2 '>
               <input 
                 type='text' 
                 placeholder='Search for products...' 
