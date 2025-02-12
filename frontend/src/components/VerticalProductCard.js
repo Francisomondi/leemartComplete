@@ -98,7 +98,7 @@ const VerticalProductCard = ({category, heading}) => {
                                         <p className='text-slate-500 line-through'>{ displayCurrency(product.price) }</p>                        
                                         
                                     </div>  
-                                    <button className='text-sm bg-red-900 hover:bg-red-700 text-white px-3 py-1 rounded-full' onClick={(e)=>{handleAddToCart(e,product?._id)}}>Add to Card</button>
+                                    <button className='text-sm bg-red-900 hover:bg-red-700 text-white px-3 py-1 rounded-full' onClick={(e)=>{handleAddToCart(e,product?._id)}}>Add to Cart</button>
                                                  
                                 </div>
                             </Link> 
