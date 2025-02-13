@@ -24,7 +24,13 @@ const Header = () => {
 
   const [search,setSearch] = useState(searchQuery)
 
-const user = useSelector(state=>state?.user?.user)
+const user = useSelector((state) => state?.user?.user);
+  const [userState, setUserState] = useState(user);
+
+  // ✅ Update state when user logs in
+  useEffect(() => {
+    setUserState(user);
+  }, [user]);
 //console.log('payload',user)
 
 
