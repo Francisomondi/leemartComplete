@@ -99,7 +99,7 @@ const Cart = () => {
       {data.length === 0 && !loading && (
         <div className='text-center'>
           <p className='bg-white py-5 text-lg font-semibold'>Your cart is empty</p>
-          <button className='bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800 mt-3' onClick={() => window.location.href = '/shop'}>
+          <button className='bg-green-600 text-white px-4 py-2 rounded hover:bg-green-800 mt-3' onClick={() => window.location.href = '/'}>
             Continue Shopping
           </button>
         </div>
