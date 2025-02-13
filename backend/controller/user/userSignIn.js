@@ -60,6 +60,7 @@ async function userSignInController(req, res) {
         res.cookie("token", token, tokenOptions);
 
         // Send response with user data (excluding password)
+          
         res.json({
             message: "Logged in successfully",
             success: true,
@@ -72,7 +73,11 @@ async function userSignInController(req, res) {
                 profilePic: user.profilePic || null
             },
             token
+            
         });
+        setTimeout(() => {
+            window.location.reload(); // ✅ Force navbar refresh
+          }, 500);
 
     } catch (error) {
         console.error("Sign-in Error:", error); // Log for debugging
