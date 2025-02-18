@@ -11,7 +11,7 @@ const Footer = () => {
           
           {/* Brand & Tagline */}
           <h1 className="lg:text-4xl text-3xl lg:leading-normal font-semibold md:w-2/5 text-red-400">
-            <span className="text-red-500">Leemart,</span> The Best E-shop in Kenya & its Environs
+            <span className="text-red-500">✅ Leemart –</span>  Your Trusted Shopping Destination
           </h1>
 
           {/* Newsletter & WhatsApp */}
@@ -36,10 +36,10 @@ const Footer = () => {
 
         {/* Social Media Links */}
         <div className="flex justify-center md:justify-start gap-6 mt-8">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 text-xl">
+          <a href="https://www.facebook.com/leemartInvestments" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 text-xl">
             <FaFacebookF />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 text-xl">
+          <a href="https://x.com/LeemartInv" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 text-xl">
             <FaTwitter />
           </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300 text-xl">
