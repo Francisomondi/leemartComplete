@@ -23,24 +23,26 @@ const Header = () => {
 
   const handleSignOut = async () => {
     try {
-      const response = await fetch(summeryApi.signOut.url, {
+      const fetchData = await fetch(summeryApi.signOut.url, {
         method: summeryApi.signOut.method,
         credentials: "include",
       });
 
-      if (!response.ok) {
+      if (!fetchData.ok) {
         throw new Error("Failed to sign out");
       }
 
-      const data = await response.json();
+      const data = await fetchData.json();
 
       if (data.success) {
         toast.success(data.message);
         dispatch(setUserDetails(null));
         navigate("/");
-      } else {
-        throw new Error(data.error || "Sign-out failed");
       }
+      if (data.error) {
+        toast.error(data.message);
+      }
+
     } catch (error) {
       toast.error(error.message);
     }
