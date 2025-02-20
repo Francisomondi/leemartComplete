@@ -12,7 +12,7 @@ import ROLE from "../common/role";
 import Context from "../context";
 
 const Header = () => {
-  const dispatch = useDispatch();
+  
   const [menuDisplay, setMenuDisplay] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [search, setSearch] = useState("");
@@ -20,7 +20,8 @@ const Header = () => {
   const navigate = useNavigate();
 
   const user = useSelector((state) => state?.user?.user);
-
+  const dispatch = useDispatch();
+  
   const handleSignOut = async () => {
     try {
       const fetchData = await fetch(summeryApi.signOut.url, {
